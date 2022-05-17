@@ -7,14 +7,21 @@
 ## Requirements
 
 * Ubuntu 20.04 LTSを用意してください。
-* ストレージは4GBでは不足します。8GBあれば問題ないと思います。
+* ストレージは8GBでは心もとないです。16GBあれば問題ないと思います。
 
 ## Usage
 
 ### Multipassでの利用方法
 
 * [Multipass](https://multipass.run/)実行環境を用意します
+  ```sh
+  brew install multipass
+  ```
 * このリポジトリ内の `kayac-isucon-2022.cfg` を手元に用意します
+  ```sh
+  git clone --depth 1 1https://github.com/matsuu/cloud-init-kayac-isucon-2022.git
+  cd cloud-init-kayac-isucon-2022
+  ```
 * 以下を実行します
   ```sh
   multipass launch --name kayac-isucon-2022 --cpus 2 --disk 8G --mem 4G --cloud-init kayac-isucon-2022.cfg 20.04
